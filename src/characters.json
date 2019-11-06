@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "name": "Olivia Pope",
+        "image": "../public/images/olivia.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Quinn Perkins",
+        "image": "../images/quinn.jpg"
+    },
+    {
+        "id": 3,
+        "name": "President Fitzgerald Grant",
+        "image": "../images/fitz.jpg"
+    }, 
+    {
+        "id": 4,
+        "name": "Mellie Grant",
+        "image": "../images/mellie.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Huck",
+        "image": "../images/huck.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Cyrus Beene",
+        "image": "../images/cyrus.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Jake Ballard",
+        "image": "../images/jake.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Rowan Pope",
+        "image": "../images/rowan.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Abby Whelan",
+        "image": "../images/abby.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Harrison Wright",
+        "image": "../images/harrison.jpg"
+    },
+    {
+        "id": 11,
+        "name": "David Rosen",
+        "image": "../images/david.jpg"
+    },
+    {
+        "id": 12,
+        "name": "Elizabeth North",
+        "image": "../images/elizabeth.jpg"
+    }
+]
