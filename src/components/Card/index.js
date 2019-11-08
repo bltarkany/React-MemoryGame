@@ -7,11 +7,10 @@ function Card({id, name, image, handleClick}) {
             key={id}
             data-id={id}
             name={name}
-            
             >
-            <img src={image} className="card-img-top" onClick={handleClick(name)} alt={name} height="200px" width="200px"/>
+            <img src={image} className="card-img-top" onClick={() => handleClick} alt={name} height="200px" width="200px"/>
         </div>
-    );
+    )
 }
 
 export default Card;

@@ -20,6 +20,7 @@ class App extends Component {
 
 
   shuffle = (arr) => {
+    console.log("suff");
     let i, j, temp;
     for (i = arr.length - 1; 1 > 0; i--) {
       j = Math.floor(Math.random() * (i + 1));
@@ -28,38 +29,45 @@ class App extends Component {
       arr[j] = temp;
     }
     return arr;
-  }
+  };
 
-  handleClick = (name) => {
-    console.log(name);
+  handleClick = () => {
+    console.log();
     // const name = event.target.attributes.getNamedItem("name").value;
     // this.shuffleChars();
-    this.checkPicked(name);
-
+    // this.checkPicked(name);
     this.setState({
-      characters: this.shuffle(characters)
-
+      score : 1
     });
-  }
+    console.log("Before:", this.state.characters);
+    // this.setState({
+    //   characters: this.shuffle(characters)
+
+    // }); 
+  };
 
   shuffleChars = () => {
+    console.log("func");
     this.setState({ characters: this.shuffle(characters) })
-  }
+  };
 
   checkPicked = (name) => {
+    console.log("start");
     if (this.state.pickedChars.includes(name)) {
+      console.log("if");
         this.setState({
           message: `You have already chosen ${name}`,
           pickedChars: []
           })
         } else {
+          console.log("else");
           this.state.pickedChars.push(name);
           console.log(this.state.pickedChars);
           this.setState({
             message: `Nice Choice. Who's next?`,
           })
         }
-  }
+  };
 
   render() {
     return (
@@ -74,6 +82,7 @@ class App extends Component {
           </Row>
           <Row>
             <Col>
+            {console.log("After:", this.state.characters)}
             {this.state.characters.map(character => (
               <Card
               key={character.id}
@@ -88,7 +97,7 @@ class App extends Component {
         </Container>
         <Footer />
       </div>
-    );
+    )
   }
 }
 
