@@ -20,36 +20,49 @@ class App extends Component {
 
 
   shuffle = (arr) => {
-    console.log("suff");
-    let i, j, temp;
-    for (i = arr.length - 1; 1 > 0; i--) {
-      j = Math.floor(Math.random() * (i + 1));
+    console.log("pbj",arr);
+    let j, temp;
+  
+    for (var i = arr.length -1; i > 0; i--) {
+      console.log("start", i);
+      j = Math.floor(Math.random() * (i));
       temp = arr[i];
       arr[i] = arr[j];
       arr[j] = temp;
     }
+    console.log("done for");
     return arr;
   };
 
-  handleClick = () => {
-    console.log();
+  // shuffle = array => {
+  //      let count = array.length, temp, rand;
+  //      while (count) {
+  //          // Pick a remaining element…
+  //          rand = Math.floor(Math.random() * count--);
+  //          // And swap it with the current element.
+  //          temp = array[count];
+  //          array[count] = array[rand];
+  //          array[rand] = temp;
+  //      }
+  //      return array;
+  //  };
+
+  handleClick = (name) => {
+    console.log(name);
     // const name = event.target.attributes.getNamedItem("name").value;
     // this.shuffleChars();
-    // this.checkPicked(name);
-    this.setState({
-      score : 1
-    });
+    this.checkPicked(name);
     console.log("Before:", this.state.characters);
-    // this.setState({
-    //   characters: this.shuffle(characters)
-
-    // }); 
+    this.setState({
+      characters: this.shuffle(characters)
+    }); 
+    console.log("shuffle done?");
   };
 
-  shuffleChars = () => {
-    console.log("func");
-    this.setState({ characters: this.shuffle(characters) })
-  };
+  // shuffleChars = () => {
+  //   console.log("func");
+  //   this.setState({ characters: this.shuffle(characters) })
+  // };
 
   checkPicked = (name) => {
     console.log("start");
@@ -57,27 +70,42 @@ class App extends Component {
       console.log("if");
         this.setState({
           message: `You have already chosen ${name}`,
-          pickedChars: []
+          pickedChars: [],
+          score: 0
           })
         } else {
           console.log("else");
           this.state.pickedChars.push(name);
-          console.log(this.state.pickedChars);
-          this.setState({
-            message: `Nice Choice. Who's next?`,
-          })
-        }
+          let newScore = this.state.pickedChars.length;
+          console.log(newScore);
+          if (this.state.topScore < newScore){
+            this.setState({
+              message: `Nice Choice. Who's next?`,
+              score: newScore,
+              topScore: newScore
+            })
+          } else {
+            this.setState({
+              message: `Nice Choice. Who's next?`,
+              score: newScore
+            })
+          }
+    }
   };
+
 
   render() {
     return (
       <div>
         <Nav />
-        <Jumbotron />
+        <Jumbotron message={this.state.message} />
         <Container>
           <Row>
             <Col>
-              <Score />
+              <Score
+                score={this.state.score}
+                topScore={this.state.topScore}
+              />
             </Col>
           </Row>
           <Row>
