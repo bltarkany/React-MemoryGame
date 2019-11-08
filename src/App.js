@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
 import './App.css';
 import Card from "./components/Card";
 import { Container, Row, Col } from "./components/Container";
@@ -7,7 +6,7 @@ import Footer from "./components/Footer";
 import Jumbotron from "./components/Jumbo";
 import Nav from "./components/Nav";
 import Score from "./components/Score";
-import characters from "./characters.json"
+import characters from "./characters.json";
 
 class App extends Component {
   // Setting this.state.friends to the friends json array
@@ -31,14 +30,20 @@ class App extends Component {
     return arr;
   }
 
-  handlePicked = event => {
-    const name = event.target.attributes.getNamedItem("name").value;
-    this.shuffleChars();
+  handleClick = (name) => {
+    console.log(name);
+    // const name = event.target.attributes.getNamedItem("name").value;
+    // this.shuffleChars();
     this.checkPicked(name);
+
+    this.setState({
+      characters: this.shuffle(characters)
+
+    });
   }
 
   shuffleChars = () => {
-    this.setState(this.state.characters = this.shuffle(this.state.characters))
+    this.setState({ characters: this.shuffle(characters) })
   }
 
   checkPicked = (name) => {
@@ -49,8 +54,9 @@ class App extends Component {
           })
         } else {
           this.state.pickedChars.push(name);
+          console.log(this.state.pickedChars);
           this.setState({
-            message: `Nice Choice. Who's next?`
+            message: `Nice Choice. Who's next?`,
           })
         }
   }
@@ -73,9 +79,9 @@ class App extends Component {
               key={character.id}
               data-id={character.id}
               name={character.name}
-              onClick={this.handlePicked}>
-              <img src={character.image} class="card-img-top" alt={character.name}/>
-              </Card>
+              image={character.image}
+              handleClick={this.handleClick}
+              />
             ))}
             </Col>
           </Row>
