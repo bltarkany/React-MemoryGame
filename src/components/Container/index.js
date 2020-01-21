@@ -2,6 +2,7 @@ import React from "react";
 import "./style.css";
 // import { expression } from "@babel/template";
 
+// grid components for layout of project
 export function Container(props) {
     return <div className="container" >{props.children}</div>;
 }
