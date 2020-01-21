@@ -2,11 +2,14 @@
 
 This app is a test of your memory through card shuffling. Based on a TV shows characters after clicking your first choice
 images will shuffle. The game is to remember which you have already chosen, before choosing again.
+For this assignment, you'll create a memory game with React. This assignment will require you to break up your 
 
 ## Overview
 
-Memory Click was created using `create-react-app`. 
-
+Memory Click was created using `create-react-app`. The application's UI into components are broken up
+to manage component state, and respond to user events.
+Bootstrap styling was used by adding the CDN to the `index.html` file 
+within the public folder. The entire project was deployed via Heroku. 
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
