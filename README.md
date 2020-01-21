@@ -15,6 +15,7 @@ within the public folder. The entire project was deployed via Heroku.
 [Demo Game](https://stormy-earth-80691.herokuapp.com/)
 
 
+![GamePhoto](https://media.giphy.com/media/gfHLScFOZ3eyhzXpay/giphy.gif)
 
 
 ### Instructions
