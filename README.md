@@ -1,4 +1,4 @@
-# React Memory Click App
+# React Memory Game App
 
 This app is a test of your memory through card shuffling. Based on a TV shows characters after clicking your first choice
 images will shuffle. The game is to remember which you have already chosen, before choosing again.
