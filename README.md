@@ -1,3 +1,14 @@
+# React Memory Click App
+
+This app is a test of your memory through card shuffling. Based on a TV shows characters after clicking your first choice
+images will shuffle. The game is to remember which you have already chosen, before choosing again.
+
+## Overview
+
+Memory Click was created using `create-react-app`. 
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
