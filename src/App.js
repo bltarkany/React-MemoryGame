@@ -34,23 +34,8 @@ class App extends Component {
     return arr;
   };
 
-  // shuffle = array => {
-  //      let count = array.length, temp, rand;
-  //      while (count) {
-  //          // Pick a remaining element…
-  //          rand = Math.floor(Math.random() * count--);
-  //          // And swap it with the current element.
-  //          temp = array[count];
-  //          array[count] = array[rand];
-  //          array[rand] = temp;
-  //      }
-  //      return array;
-  //  };
-
   handleClick = (name) => {
     console.log(name);
-    // const name = event.target.attributes.getNamedItem("name").value;
-    // this.shuffleChars();
     this.checkPicked(name);
     console.log("Before:", this.state.characters);
     this.setState({
@@ -58,11 +43,6 @@ class App extends Component {
     }); 
     console.log("shuffle done?");
   };
-
-  // shuffleChars = () => {
-  //   console.log("func");
-  //   this.setState({ characters: this.shuffle(characters) })
-  // };
 
   checkPicked = (name) => {
     console.log("start");
