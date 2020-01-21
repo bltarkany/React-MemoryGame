@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
 
+// jumbotron is a component built from the bootstrap jumbotron
 function Jumbotron(props) {
     return (
       <div className="jumbotron text-center">
