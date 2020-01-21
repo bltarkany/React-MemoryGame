@@ -11,6 +11,6 @@ function Jumbotron(props) {
         {props.message ? (<p>{props.message}</p>) : (<p>Click Character to Begin</p>)}
       </div>
     );
-  }
+}
   
-  export default Jumbotron;  
+export default Jumbotron;  
