@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
 
+// card component to hold each character 
 function Card({id, name, image, handleClick}) {
     return (
         <div className="card float-left"
