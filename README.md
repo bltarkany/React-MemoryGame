@@ -12,7 +12,10 @@ to manage component state, and respond to user events.
 Bootstrap styling was used by adding the CDN to the `index.html` file 
 within the public folder. The entire project was deployed via Heroku. 
 
-[Demo Game](https://stormy-earth-80691.herokuapp.com/)
+
+#### Demo Game
+
+  [React Memory Game](https://stormy-earth-80691.herokuapp.com/)
 
 
 ![GamePhoto](https://media.giphy.com/media/gfHLScFOZ3eyhzXpay/giphy.gif)
